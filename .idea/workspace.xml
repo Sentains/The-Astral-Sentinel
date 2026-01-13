@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a45831d2-97ca-4940-b2d1-c5c7fe050a36" name="Changes" comment="first">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/The Astral Sentinel/bullet.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/The Astral Sentinel/enemy.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/The Astral Sentinel/results.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/The Astral Sentinel/ship1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/The Astral Sentinel/ship2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/The Astral Sentinel/ship3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/The Astral Sentinel/1st_spaceship.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/The Astral Sentinel/2nd_spaceship.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/The Astral Sentinel/3rd_spaceship.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/The Astral Sentinel/main_code.py" beforeDir="false" afterPath="$PROJECT_DIR$/The Astral Sentinel/main_code.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2xJb0Z20FakwuhxuohUw7NhfGih" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python.1st.executor&quot;: &quot;Run&quot;,
+    &quot;Python.2nd.executor&quot;: &quot;Run&quot;,
+    &quot;Python.3rd.executor&quot;: &quot;Run&quot;,
+    &quot;Python.3rd2nd.executor&quot;: &quot;Run&quot;,
+    &quot;Python.first_arcade_adventure.executor&quot;: &quot;Run&quot;,
+    &quot;Python.futures code.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main_code.executor&quot;: &quot;Run&quot;,
+    &quot;Python.nim.executor&quot;: &quot;Run&quot;,
+    &quot;Python.yandex.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Семенов/PycharmProjects/main/The Astral Sentinel&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.grazie&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Семенов\PycharmProjects\main\The Astral Sentinel" />
+      <recent name="C:\Users\Семенов\PycharmProjects\main\Physics simulator" />
+      <recent name="C:\Users\Семенов\PycharmProjects\main\PyQt project" />
+      <recent name="C:\Users\Семенов\PycharmProjects\main" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Семенов\PycharmProjects\main\The Astral Sentinel" />
+      <recent name="C:\Users\Семенов\PycharmProjects\main" />
+      <recent name="C:\Users\Семенов\PycharmProjects\main\PyQt project" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-dfff61a61320-9cdd278e9d02-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-251.25410.159" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a45831d2-97ca-4940-b2d1-c5c7fe050a36" name="Changes" comment="" />
+      <created>1747658901948</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1747658901948</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="first" />
+    <option name="LAST_COMMIT_MESSAGE" value="first" />
+  </component>
+</project>
