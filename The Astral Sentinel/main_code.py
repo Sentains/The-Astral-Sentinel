@@ -16,21 +16,28 @@ class MenuView(arcade.View):
     def __init__(self):
         super().__init__()
         self.background_color = arcade.color.APPLE_GREEN
+        
         self.manager = UIManager()
         self.manager.enable()
+        
         self.anchor_layout = UIAnchorLayout()
         self.box_layout = UIBoxLayout(vertical=True, space_between=20)
+        
         title = UILabel(text="The Astral Sentinel", font_size=30, text_color=arcade.color.WHITE, width=400)
         self.box_layout.add(title)
+        
         start_button = arcade.gui.UIFlatButton(text="Начать", width=200)
         start_button.on_click = self.on_start
         self.box_layout.add(start_button)
+        
         rules_button = arcade.gui.UIFlatButton(text="Прочитать правила", width=200)
         rules_button.on_click = self.on_read_rules
         self.box_layout.add(rules_button)
+        
         results_button = arcade.gui.UIFlatButton(text="Посмотреть результаты", width=200)
         results_button.on_click = self.on_view_results
         self.box_layout.add(results_button)
+        
         label = UILabel(text="Выберите корабль:", font_size=20, text_color=arcade.color.WHITE, width=300)
         self.box_layout.add(label)
         self.option_list = ["Случайный", "Первый", "Второй", "Третий"]
@@ -42,6 +49,7 @@ class MenuView(arcade.View):
         self.anchor_layout.add(self.box_layout)
         self.manager.add(self.anchor_layout)
         self.ship_images = []
+        
         for i, texture_path in enumerate(TEXTURE_PATHS):
             sprite = arcade.Sprite(texture_path, scale=0.3)
             sprite.center_x = SCREEN_WIDTH - 100
@@ -90,6 +98,7 @@ class RulesView(arcade.View):
         ]
         self.text_objects = []
         y = SCREEN_HEIGHT - 150
+        
         for line in self.rules_lines:
             text_obj = arcade.Text(
                 text=line,
@@ -122,6 +131,7 @@ class ResultsView(arcade.View):
             self.results_text = ["Результаты еще не сохранены."]
         self.text_objects = []
         y = SCREEN_HEIGHT - 50
+        
         for line in self.results_text:
             text_obj = arcade.Text(
                 text=line.strip(),
@@ -149,19 +159,25 @@ class FinalResultsView(arcade.View):
     def __init__(self, final_score):
         super().__init__()
         self.final_score = final_score
+        
         self.manager = UIManager()
         self.manager.enable()
+        
         layout = UIAnchorLayout()
         box = UIBoxLayout(vertical=True, space_between=20, align="center")
         box.center_x = SCREEN_WIDTH // 2
         box.center_y = SCREEN_HEIGHT // 2
+        
         title = UILabel(text="Игра завершена!", font_size=30, text_color=arcade.color.WHITE)
         box.add(title)
+        
         score_label = UILabel(text=f"Ваш результат: {self.final_score} очков", font_size=20, text_color=arcade.color.WHITE)
         box.add(score_label)
+        
         menu_button = arcade.gui.UIFlatButton(text="В главное меню", width=200)
         menu_button.on_click = self.on_return
         box.add(menu_button)
+        
         exit_button = arcade.gui.UIFlatButton(text="Выйти", width=200)
         exit_button.on_click = self.on_exit
         box.add(exit_button)
@@ -209,6 +225,7 @@ class GameView(arcade.View):
     def on_update(self, delta_time):
         self.player_sprite.center_x += self.player_change_x
         self.player_sprite.center_x = max(0, min(SCREEN_WIDTH, self.player_sprite.center_x))
+        
         for enemy in self.enemy_list:
             enemy.center_y -= 2
             if enemy.center_y < 0:
@@ -216,16 +233,19 @@ class GameView(arcade.View):
                 self.life -= 1
                 if self.life <= 0:
                     self.game_over()
+                    
         for bullet in self.bullet_list:
             bullet.center_y += 5
             if bullet.center_y > SCREEN_HEIGHT:
                 bullet.remove_from_sprite_lists()
+                
         for enemy in self.enemy_list:
             if arcade.check_for_collision(self.player_sprite, enemy):
                 enemy.remove_from_sprite_lists()
                 self.life -= 1
                 if self.life <= 0:
                     self.game_over()
+                    
             for bullet in self.bullet_list:
                 if arcade.check_for_collision(bullet, enemy):
                     enemy.remove_from_sprite_lists()
@@ -236,13 +256,11 @@ class GameView(arcade.View):
             self.spawn_enemy()
             self.spawn_enemy_timer = 0
 
-
     def spawn_enemy(self):
         enemy = arcade.Sprite(ENEMY_TEXTURE_PATH, 0.5)
         enemy.center_x = random.uniform(0, SCREEN_WIDTH)
         enemy.center_y = SCREEN_HEIGHT + 20
         self.enemy_list.append(enemy)
-
 
     def on_key_press(self, key, modifiers):
         if key == arcade.key.LEFT:
@@ -252,18 +270,15 @@ class GameView(arcade.View):
         elif key == arcade.key.SPACE:
             self.shoot()
 
-
     def on_key_release(self, key, modifiers):
         if key in [arcade.key.LEFT, arcade.key.RIGHT]:
             self.player_change_x = 0
-
 
     def shoot(self):
         bullet = arcade.Sprite(BULLET_TEXTURE_PATH, 0.5)
         bullet.center_x = self.player_sprite.center_x
         bullet.bottom = self.player_sprite.top
         self.bullet_list.append(bullet)
-
 
     def game_over(self):
         with open("results.txt", "a") as f:
