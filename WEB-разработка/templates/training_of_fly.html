@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {% if "инженер" in prof or "строитель" in prof %}
+        <img src="{{ url_for('static', filename='img/engineer.jpg') }}" alt="engineer.jpg"
+             class="w-100">
+    {% else %}
+        <img src="{{ url_for('static', filename='img/science.jpg') }}" alt="science.jpg"
+             class="w-100">
+    {% endif %}
+{% endblock %}
